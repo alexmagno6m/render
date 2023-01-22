@@ -6,6 +6,7 @@ import ssl
 
 
 app = dash.Dash(__name__)
+server = app.server
 ssl._create_default_https_context = ssl._create_unverified_context
 r = urllib.request.urlopen('https://raw.githubusercontent.com/plotly/datasets/master/gapminder2007.csv')
 df = pd.read_csv(r)
